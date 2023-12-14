@@ -1,0 +1,18 @@
+package com.arithmetic.addition;
+
+import java.io.IOException;
+import io.helidon.microprofile.server.Server;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+		Server server = startServer();
+        System.out.println("http://localhost:" + server.port() + "/greet");
+    }
+	
+    static Server startServer() {
+        return Server.create().start(); 
+    }
+
+
+}
